@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Worldnews</title>
+    <link rel="stylesheet" href="../css/style5.css">
+</head>
+<body>
+    <header><h1>Worldnews</h1></header>
+
+    <div class="navigation-links">
+        <a href="../pages/index.html">home</a>
+        <a href="../pages/about us.html">about us</a> 
+        <a href="../pages/donations.html">donations</a> 
+        <a href="../pages/contact us.html">contact us</a> 
+        <a href="../pages/sign in.html">sign in</a>
+    </div>
+
+    <form id="loginForm">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Log In">
+    </form> 
+
+    <footer>
+        <h1>Angel Gabriel Rivera Resto was here</h1>
+        <h2>All rights reserved to Worldnews &copy;</h2>   
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('¡Login exitoso!');
+                    window.location.href = '../pages/index.html';
+                } else {
+                    alert(data.error || 'Usuario o contraseña incorrectos');
+                }
+            } catch (err) {
+                console.error('Error:', err);
+                alert('No se pudo conectar con el servidor backend.');
+            }
+        });
+    </script>
+</body>
+</html>

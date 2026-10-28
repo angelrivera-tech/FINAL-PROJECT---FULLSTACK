@@ -1,0 +1,131 @@
+/* Base setup to allow full-height positioning */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    color: #222222;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 25px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navigation bar links container */
+.navigation-links {
+    background-color: #1b1b1b;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navigation-links a:hover {
+    background-color: #ffffff;
+    color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Page Headings and Content Styling */
+h1 {
+    color: #1a1a1a;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+/* Contact List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+ul li {
+    padding: 10px 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #333333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* Dividers */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+    margin: 30px auto;
+    width: 80%;
+}
+
+/* Footer styles - Full-bleed bottom banner */
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 30px 20px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: auto;
+    box-sizing: border-box;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer h1, footer h2 {
+    color: #cccccc;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}

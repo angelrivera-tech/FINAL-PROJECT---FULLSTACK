@@ -1,0 +1,262 @@
+/* Base setup to allow full-height positioning */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    color: #222222;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 25px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Navigation bar links container */
+.navigation-links {
+    background-color: #1b1b1b;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navigation-links a:hover {
+    background-color: #ffffff;
+    color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Section Headings */
+h2 {
+    color: #1a1a1a;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Word-Style Editor Container --- */
+.word-editor-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Toolbar Styling */
+.word-toolbar {
+    background-color: #ffffff;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tool-btn {
+    background: #f8f9fa;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.tool-btn:hover {
+    background: #e2e8f0;
+}
+
+.tool-select {
+    padding: 6px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.toolbar-divider {
+    width: 1px;
+    height: 24px;
+    background-color: #cccccc;
+    margin: 0 4px;
+}
+
+/* Word Paper Sheet Styling */
+.word-page {
+    background-color: #ffffff;
+    min-height: 450px;
+    padding: 40px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 8px 8px;
+    outline: none;
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.word-page h1 {
+    margin-top: 0;
+    color: #111;
+    font-size: 1.8rem;
+}
+
+/* Publish Button Wrapper */
+.editor-actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.submit-btn {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+/* Existing Articles List Container */
+.articles-list-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.admin-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.admin-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+    color: #333333;
+}
+
+.admin-list-item:last-child {
+    border-bottom: none;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover {
+    background-color: #ec971f;
+    transform: translateY(-1px);
+}
+
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+    transform: translateY(-1px);
+}
+
+/* Dividers */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+    margin: 30px auto;
+    width: 80%;
+}
+
+/* Footer styles - Full-bleed bottom banner */
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 30px 20px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: auto;
+    box-sizing: border-box;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer h1, footer h2 {
+    color: #cccccc;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}

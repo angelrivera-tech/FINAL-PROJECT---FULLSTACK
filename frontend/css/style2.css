@@ -1,0 +1,138 @@
+
+/* Base setup - matches home page layout and background */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Matching subtle modern gradient background */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    color: #222222;
+}
+
+/* Header styling */
+header {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 25px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Navigation bar links container */
+.navigation-links {
+    background-color: #1b1b1b;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Links with smooth hover animations */
+.navigation-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navigation-links a:hover {
+    background-color: #ffffff;
+    color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Headings */
+body > h1 {
+    color: #1a1a1a;
+    margin-top: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+}
+
+/* Paragraph styling styled as clean content cards */
+p {
+    max-width: 700px;
+    margin: 15px auto;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #333333;
+    padding: 0 20px;
+}
+
+/* Contact List Card Styling */
+ul {
+    list-style-type: none;
+    padding: 20px 30px;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+ul li {
+    padding: 10px 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #222222;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li::before {
+    content: "• ";
+    color: #d9534f;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
+/* Dividers */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+    margin: 30px auto;
+    width: 80%;
+}
+
+/* Footer styles - Pinned to bottom */
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer h1, footer h2 {
+    color: #cccccc;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}

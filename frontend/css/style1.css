@@ -1,0 +1,324 @@
+/* Base setup to allow full-height positioning */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Subtle modern gradient background */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    color: #222222;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 25px 20px 0px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Page Titles */
+header h1, h1 {
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Navigation bar links container - Spans full viewport width */
+.header-links,
+header nav {
+    background-color: #1b1b1b;
+    padding: 12px 20px 6px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+}
+
+/* Header Links with smooth hover animation */
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+header a:hover {
+    background-color: #ffffff;
+    color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Search Container styling - Spans full viewport width */
+.search-container {
+    background-color: #1b1b1b;
+    padding: 0px 20px 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 220px;
+}
+
+.search-container button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-container button:hover {
+    background-color: #025aa5;
+}
+
+/* Section Headings */
+h2 {
+    color: #1a1a1a;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+/* Article Links - Centered block containers with black text */
+a:not(header a):not(.sidebar-content a) {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease;
+    max-width: 400px;
+    flex: 1 1 300px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Image styling - Centered with dimensions and hover animations */
+img {
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover effect for article links containing images */
+a:not(header a):not(.sidebar-content a):hover img {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22);
+    filter: brightness(1.05);
+}
+
+a:not(header a):not(.sidebar-content a):hover {
+    color: #d9534f;
+}
+
+/* Dividers */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+    margin: 25px auto;
+    width: 80%;
+}
+
+/* Footer styles - Spans full width at bottom */
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 30px 20px;
+    width: 100%;                  
+    margin-top: auto;             
+    box-sizing: border-box;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer h1, footer h2 {
+    color: #cccccc;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* ==========================================
+   ACCOUNT BUTTON & SIDEBAR DRAWER STYLES
+   ========================================== */
+
+/* Botón de Account en la navegación */
+.account-btn {
+    background-color: #0275d8;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.account-btn:hover {
+    background-color: #ffffff;
+    color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Panel Lateral Deslizante (Sidebar) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -320px; /* Oculto a la derecha fuera de la pantalla */
+    width: 280px;
+    height: 100%;
+    background-color: #1b1b1b;
+    color: #ffffff;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1000;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.sidebar.active {
+    right: 0; /* Desliza hacia adentro */
+}
+
+/* Encabezado del Menú Lateral */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 15px;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.close-btn {
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaaaaa;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #ffffff;
+}
+
+/* Lista de opciones en el Menú Lateral */
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sidebar-content a {
+    color: #dddddd;
+    text-decoration: none;
+    padding: 12px 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: block;
+    margin: 4px 0;
+}
+
+.sidebar-content a:hover {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+.sidebar-content a.admin-link {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.sidebar-content a.admin-link:hover {
+    background-color: #d9534f;
+    color: #ffffff;
+}
+
+.sidebar-content hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background: #333333;
+    margin: 15px 0;
+}
+
+/* Fondo semi-transparente al abrir la cuenta */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    display: none;
+    z-index: 999;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}

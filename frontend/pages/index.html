@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="../css/style1.css"><!--este es el estilo de la pagina-->
+</head>
+<body>
+    <header>
+        <h1>Worldnews</h1>
+        <div class="header-links">
+            <a href="../pages/about us.html">about us</a>
+            <a href="../pages/subscriptions.html">DONATIONS</a>
+            <a href="../pages/contact us.html">contact us</a>
+            <a href="../pages/sign in.html">sign in</a>
+            <a href="../pages/log in.html">log in</a>
+            <!-- Botón de Account que abre el menú lateral -->
+            <button class="account-btn" onclick="toggleSidebar()">Account 👤</button>
+        </div>
+    </header> 
+
+    <!-- Menú Lateral (Sidebar Drawer) -->
+    <div id="accountSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>My Account</h3>
+            <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        </div>
+        <div class="sidebar-content">
+            <a href="../pages/articles admin.html" class="admin-link">Manage Articles 🛠️</a>
+            <a href="#">Profile Settings</a>
+            <a href="#">My Saved News</a>
+            <hr>
+            <a href="../pages/log in.html" style="color: #d9534f;">Log Out</a>
+        </div>
+    </div>
+    
+    <!-- Fondo oscuro para cerrar el menú al hacer clic afuera -->
+    <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Search bar container placed right below the header links -->
+    <div class="search-container">
+        <input type="text" id="articleSearch" placeholder="Search articles..." onkeyup="searchArticles()">
+        <button onclick="searchArticles()">Search</button>
+    </div>
+
+    <hr>
+
+    <div id="articles-container">
+        <div class="article-item">
+            <h2>Noticias de Izquierda</h2>
+            <a href="https://www.laizquierdadiario.com/Jornada-de-huelga-general-en-Italia-contra-Meloni-y-el-rearme-militar">
+                Jornada de huelga general en Italia contra Meloni y el rearme militar
+                <img src="../imagenes/imagen2.jpg" alt="Noticias de Izquierda" style="width:600px;height:200px;">
+            </a>
+        </div>
+        <hr>
+
+        <div class="article-item">
+            <h2>Noticias de Derecha</h2>
+            <a href="https://derechadiario.com.ar/politica/los-primeros-aviones-f-16-argentinos-iniciaron-su-viaje-hacia-pais">
+                Los primeros aviones f-16 argentinos iniciaron su viaje hacia pais
+                <img src="../imagenes/imagen.webp" alt="Noticias de derecha" style="width:600px;height:200px;">
+            </a>
+        </div>
+        <hr>
+
+        <div class="article-item">
+            <h2>Noticias de guerra</h2>
+            <a href="https://as.com/actualidad/politica/guerra-de-ucrania-en-directo-rusia-responde-al-rearme-militar-de-la-otan-con-un-programa-a-gran-escala-f202511-d/">
+                Guerra de Ucrania, en directo: Rusia responde al rearme militar de la OTAN con un programa a gran escala
+                <img src="../imagenes/image3.avif" alt="Noticias de guerra" style="width:600px;height:200px;">
+            </a>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer><!--esto es el footer de la pagina-->
+        <h1>Angel Gabriel Rivera Resto was here</h1>
+        <h2>All rights reserved to Worldnews&#169</h2>   
+    </footer>
+
+    <script>
+        // Función para la búsqueda de artículos
+        function searchArticles() {
+            let input = document.getElementById('articleSearch').value.toLowerCase();
+            let articles = document.getElementsByClassName('article-item');
+            
+            for (let i = 0; i < articles.length; i++) {
+                let text = articles[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    articles[i].style.display = "";
+                } else {
+                    articles[i].style.display = "none";
+                }
+            }
+        }
+
+        // Función para abrir y cerrar el panel lateral de Account
+        function toggleSidebar() {
+            const sidebar = document.getElementById('accountSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
