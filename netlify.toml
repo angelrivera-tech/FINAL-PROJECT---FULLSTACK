@@ -1,0 +1,10 @@
+[build]
+  base = "frontend"
+  publish = "."
+  command = ""
+
+# Serve the home page at the site root
+[[redirects]]
+  from = "/"
+  to = "/pages/index.html"
+  status = 200

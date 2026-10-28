@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Articles - Worldnews</title>
+    <link rel="stylesheet" href="../css/style6.css">
+</head>
+<body>
+    <header>
+        <h1>Article Editor</h1>
+    </header>
+
+    <div class="navigation-links">
+        <a href="../pages/index.html">home</a>
+        <a href="../pages/about us.html">about us</a> 
+        <a href="../pages/donations.html">donations</a> 
+        <a href="../pages/contact us.html">contact us</a> 
+        <a href="../pages/log in.html">log in</a>
+        <a href="../pages/sign in.html">sign in</a>
+    </div>
+
+    <hr>
+
+    <h2>Write & Format Article</h2>
+    
+    <div class="word-editor-container">
+        <!-- Barra de herramientas con comandos funcionales -->
+        <div class="word-toolbar">
+            <button type="button" class="tool-btn" data-command="bold"><b>B</b></button>
+            <button type="button" class="tool-btn" data-command="italic"><i>I</i></button>
+            <button type="button" class="tool-btn" data-command="underline"><u>U</u></button>
+            <div class="toolbar-divider"></div>
+            <select class="tool-select">
+                <option value="H1">Heading 1</option>
+                <option value="H2">Heading 2</option>
+                <option value="P" selected>Paragraph</option>
+            </select>
+            <div class="toolbar-divider"></div>
+            <button type="button" class="tool-btn" data-command="justifyLeft">⬅</button>
+            <button type="button" class="tool-btn" data-command="justifyRight">➡</button>
+            <button type="button" class="tool-btn" data-command="justifyCenter">☰</button>
+            <div class="toolbar-divider"></div>
+            <button type="button" class="tool-btn" disabled>📷 Add Photo</button>
+            <button type="button" class="tool-btn" disabled>🔗 Link</button>
+        </div>
+
+        <!-- Área de escritura tipo Word -->
+        <div class="word-page" contenteditable="true">
+            <h1>Article Title Here...</h1>
+            <p>Start writing your article here just like in Microsoft Word...</p>
+        </div>
+
+        <div class="editor-actions">
+            <button type="button" class="submit-btn">Publish Article</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Existing Articles (Read & Delete)</h2>
+    <div class="articles-list-container">
+        <ul class="admin-list">
+            <!-- Los artículos se cargarán dinámicamente desde el backend -->
+        </ul>
+    </div>
+
+    <hr>
+
+    <footer>
+        <h1>Angel Gabriel Rivera Resto was here</h1>
+        <h2>All rights reserved to Worldnews &copy;</h2>   
+    </footer>
+
+    <!-- Enlace al archivo de JavaScript externo -->
+    <script src="../admin.js"></script>
+</body>
+</html>
